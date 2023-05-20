@@ -17,10 +17,10 @@ class Bank:
             self.wallet.deposit(account_number, amount)
             self.add_transaction("Deposit", account_number, amount)
 
-    def withdraw(self, account_number, amount):
+    def withdraw(self, account_number, amount, tag=None):
         if self.is_valid_account(account_number) and amount > 0 and self.wallet.get_balance(account_number) >= amount:
             self.wallet.withdraw(account_number, amount)
-            self.add_transaction("Withdrawal", account_number, amount)
+            self.add_transaction("Withdrawal", account_number, amount, tag=tag)
 
     def transfer(self, sender_account, receiver_account, amount, tag=None):
         if self.is_valid_account(sender_account) and self.is_valid_account(receiver_account) and amount > 0 and self.wallet.get_balance(sender_account) >= amount:
