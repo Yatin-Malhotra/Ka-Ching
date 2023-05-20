@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form method="POST" action="/create_account">
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number" required><br><br>
+        <label for="initial_balance">Initial Balance:</label>
+        <input type="number" id="initial_balance" name="initial_balance" step="0.01" required><br><br>
+        <input type="submit" value="Create Account">
+    </form>
+</body>
+</html>

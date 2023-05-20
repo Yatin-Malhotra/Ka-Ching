@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transfer</title>
+</head>
+<body>
+    <h1>Transfer</h1>
+    <form method="POST" action="/transfer">
+        <label for="sender_account">Sender Account Number:</label>
+        <input type="text" id="sender_account" name="sender_account" required><br><br>
+        <label for="receiver_account">Receiver Account Number:</label>
+        <input type="text" id="receiver_account" name="receiver_account" required><br><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" step="0.01" required><br><br>
+        <input type="submit" value="Transfer">
+    </form>
+</body>
+</html>
