@@ -2,13 +2,52 @@
 <html>
 <head>
     <title>Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            padding: 20px;
+        }
+        
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Transactions</h1>
-    <ul>
+    <table>
+        <tr>
+            <th>Account Number</th>
+            <th>Date</th>
+            <th>Transaction Type</th>
+            <th>Amount</th>
+            <th>Tag</th>
+        </tr>
         {% for transaction in transactions %}
-        <li>{{ transaction }}</li>
+        <tr>
+            <td>{{ transaction.account_number }}</td>
+            <td>{{ transaction.date }}</td>
+            <td>{{ transaction.transaction_type }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.tag }}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>
